@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10] = {10, 20, 30, 40};
+    int n = 4; // current size
+
+   
+    for (int i = n; i > 0; i--) {
+        arr[i] = arr[i-1];
+    }
+    arr[0] = 5;
+    n++;
+
+   
+    for (int i = n; i > 2; i--) {
+        arr[i] = arr[i-1];
+    }
+    arr[2] = 15;
+    n++;
+
+   
+    arr[n] = 50;
+    n++;
+
+ 
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
